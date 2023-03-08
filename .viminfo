@@ -130,20 +130,20 @@ $
 |3,0,36,0,1,0,1672123125,"k"
 
 # File marks:
-'0  74  0  /usr/local/bin/f.sh
-|4,48,74,0,1678196671,"/usr/local/bin/f.sh"
-'1  2  35  /private/etc/pam.d/sudo
-|4,49,2,35,1674726985,"/private/etc/pam.d/sudo"
-'2  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
-|4,50,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
+'0  1  0  ~/Git/platform/it
+|4,48,1,0,1678276700,"~/Git/platform/it"
+'1  74  0  /usr/local/bin/f.sh
+|4,49,74,0,1678196671,"/usr/local/bin/f.sh"
+'2  2  35  /private/etc/pam.d/sudo
+|4,50,2,35,1674726985,"/private/etc/pam.d/sudo"
 '3  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
-|4,51,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
+|4,51,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
 '4  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
-|4,52,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+|4,52,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
 '5  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,53,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
 '6  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
-|4,54,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
+|4,54,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
 '7  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,55,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
 '8  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
@@ -152,14 +152,28 @@ $
 |4,57,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
 
 # Jumplist (newest first):
+-'  1  0  ~/Git/platform/it
+|4,39,1,0,1678276700,"~/Git/platform/it"
 -'  74  0  /usr/local/bin/f.sh
 |4,39,74,0,1678196671,"/usr/local/bin/f.sh"
+-'  74  0  /usr/local/bin/f.sh
+|4,39,74,0,1678196671,"/usr/local/bin/f.sh"
+-'  28  0  /usr/local/bin
+|4,39,28,0,1678196659,"/usr/local/bin"
 -'  28  0  /usr/local/bin
 |4,39,28,0,1678196659,"/usr/local/bin"
 -'  2  35  /private/etc/pam.d/sudo
 |4,39,2,35,1674726985,"/private/etc/pam.d/sudo"
 -'  2  35  /private/etc/pam.d/sudo
 |4,39,2,35,1674726985,"/private/etc/pam.d/sudo"
+-'  2  35  /private/etc/pam.d/sudo
+|4,39,2,35,1674726985,"/private/etc/pam.d/sudo"
+-'  2  35  /private/etc/pam.d/sudo
+|4,39,2,35,1674726985,"/private/etc/pam.d/sudo"
+-'  1  0  /private/etc/pam.d/sudo
+|4,39,1,0,1674726935,"/private/etc/pam.d/sudo"
+-'  1  0  /private/etc/pam.d/sudo
+|4,39,1,0,1674726935,"/private/etc/pam.d/sudo"
 -'  1  0  /private/etc/pam.d/sudo
 |4,39,1,0,1674726935,"/private/etc/pam.d/sudo"
 -'  1  0  /private/etc/pam.d/sudo
@@ -173,6 +187,22 @@ $
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147720,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,1,0,1672147634,"~/Git/platform/.git/COMMIT_EDITMSG"
@@ -188,6 +218,22 @@ $
 |4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672143993,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,1,0,1672138294,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/COMMIT_EDITMSG
@@ -236,90 +282,46 @@ $
 |4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
 |4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
--'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
-|4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
+-'  79  0  ~/Git/platform/.git/COMMIT_EDITMSG
+|4,39,79,0,1672123230,"~/Git/platform/.git/COMMIT_EDITMSG"
 -'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo
 |4,39,1,0,1672123130,"~/Git/platform/.git/rebase-merge/git-rebase-todo"
 -'  1  0  ~/Git/platform/.git/rebase-merge/git-rebase-todo

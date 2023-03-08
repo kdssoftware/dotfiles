@@ -29,3 +29,10 @@ vim.notimeout = true
 
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=1, bg=LightGrey })
 vim.api.nvim_set_hl(0, "Normal", { ctermfg=White,  ctermbg=Black })
+
+if vim.fn.has("unnamedplus") == 1 then
+    vim.cmd("set clipboard=unnamedplus")
+else
+    vim.cmd("set clipboard=unnamed")
+end
+
