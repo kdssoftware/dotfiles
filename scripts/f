@@ -1,0 +1,252 @@
+#!/bin/bash
+
+# vf - fuzzy open with vim from anywhere
+# ex: vf word1 word2 ... (even part of a file name)
+# zsh autoload function
+vf() {
+  local files
+  files=(${(f)"$(locate -Ai -0 $@ | grep -z -vE `~$` | fzf --read0 -0 -1 -m)"})
+ 
+  if [[ -n $files ]]
+  then
+     vim -- $files
+     print -l $files[1]
+  fi
+}
+
+
+
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+} 
+
+# fuzzy grep open via ag
+vg() {
+  local file
+
+  file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file
+  fi
+}
+
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+
+# fdr - cd to selected parent directory
+fdr() {
+  local declare dirs=()
+  get_parent_dirs() {
+    if [[ -d "${1}" ]]; then dirs+=("$1"); else return; fi
+    if [[ "${1}" == '/' ]]; then
+      for _dir in "${dirs[@]}"; do echo $_dir; done
+    else
+      get_parent_dirs $(dirname "$1")
+    fi
+  }
+  local DIR=$(get_parent_dirs $(realpath "${1:-$PWD}") | fzf-tmux --tac)
+  cd "$DIR"
+}
+
+# cf - fuzzy cd from anywhere
+# ex: cf word1 word2 ... (even part of a file name)
+# zsh autoload function
+cf() {
+  local file
+
+  file="$(locate -Ai -0 $@ | grep -z -vE '~$' | fzf --read0 -0 -1)"
+
+  if [[ -n $file ]]
+  then
+     if [[ -d $file ]]
+     then
+        cd -- $file
+     else
+        cd -- ${file:h}
+     fi
+  fi
+}
+
+
+# using ripgrep combined with preview
+# find-in-file - usage: fif <searchTerm>
+fif() {
+
+    grep --line-buffered --color=never -r "" * | fzf
+
+    # with ag - respects .agignore and .gitignore
+    ag --nobreak --nonumbers --noheading . | fzf
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi   
+  rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
+}
+
+
+# Select a docker container to start and attach to
+function da() {
+  local cid
+  cid=$(docker ps -a | sed 1d | fzf -1 -q "$1" | awk '{print $1}')
+
+  [ -n "$cid" ] && docker start "$cid" && docker attach "$cid"
+}
+
+# Select a running docker container to stop
+function ds() {
+  local cid
+  cid=$(docker ps | sed 1d | fzf -q "$1" | awk '{print $1}')
+
+  [ -n "$cid" ] && docker stop "$cid"
+}
+
+# Select a docker container to remove
+function drm() {
+  local cid
+  cid=$(docker ps -a | sed 1d | fzf -q "$1" | awk '{print $1}')
+
+  [ -n "$cid" ] && docker rm "$cid"
+}
+
+# Same as above, but allows multi selection:
+function drms() {
+  docker ps -a | sed 1d | fzf -q "$1" --no-sort -m --tac | awk '{ print $1 }' | xargs -r docker rm
+}
+
+# Select a docker image or images to remove
+function drmi() {
+  docker images | sed 1d | fzf -q "$1" --no-sort -m --tac | awk '{ print $3 }' | xargs -r docker rmi
+}
+
+
+# ch - browse chrome history
+chh() {
+  local cols sep google_history open
+  cols=$(( COLUMNS / 3 ))
+  sep='{::}'
+
+  if [ "$(uname)" = "Darwin" ]; then
+    google_history="$HOME/Library/Application Support/Google/Chrome/Default/History"
+    open=open
+  else
+    google_history="$HOME/.config/google-chrome/Default/History"
+    open=xdg-open
+  fi
+  cp -f "$google_history" /tmp/h
+  sqlite3 -separator $sep /tmp/h \
+    "select substr(title, 1, $cols), url
+     from urls order by last_visit_time desc" |
+  awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
+  fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
+}
+
+# run npm script (requires jq)
+ns() {
+  local script
+  script=$(cat package.json | jq -r '.scripts | keys[] ' | sort | fzf) && npm run $(echo "$script")
+}
+
+# Install (one or multiple) selected application(s)
+# using "brew search" as source input
+# mnemonic [B]rew [I]nstall [P]ackage
+bip() {
+echo "Currenty broken"
+##  local inst=$(brew search "$@" | fzf -m)
+##
+##  if [[ $inst ]]; then
+##    for prog in $(echo $inst);
+##    do; brew install $prog; done;
+##  fi
+}
+
+# Update (one or multiple) selected application(s)
+# mnemonic [B]rew [U]pdate [P]ackage
+bup() {
+echo "Currently broken"
+  ##local upd=$(brew leaves | fzf -m)
+
+  ##if [[ $upd ]]; then
+  ##  for prog in $(echo $upd);
+  ##  do; brew upgrade $prog; done;
+  ##fi
+}
+
+
+# Delete (one or multiple) selected application(s)
+# mnemonic [B]rew [C]lean [P]ackage (e.g. uninstall)
+bcp() {
+echo "Currently broken"
+  ##local uninst=$(brew leaves | fzf -m)
+
+  ##if [[ $uninst ]]; then
+  ##  for prog in $(echo $uninst);
+  ##  do; brew uninstall $prog; done;
+  ##fi
+}
+
+if [[ $1 == "fe" ]]; then
+    fe
+elif [[ $1 == "vf" ]]; then
+    vf
+elif [[ $1 == "vg" ]]; then
+    vg
+elif [[ $1 == "fd" ]]; then
+    fd
+elif [[ $1 == "fdr" ]]; then
+    fdr
+elif [[ $1 == "cf" ]]; then
+    cf
+elif [[ $1 == "fif" ]]; then
+    fif
+elif [[ $1 == "da" ]]; then
+    da
+elif [[ $1 == "ds" ]]; then
+    ds
+elif [[ $1 == "drm" ]]; then
+    drm
+elif [[ $1 == "drms" ]]; then
+    drms
+elif [[ $1 == "drmi" ]]; then
+    drmi
+elif [[ $1 == "chh" ]]; then
+    chh
+elif [[ $1 == "ns" ]]; then
+    ns
+elif [[ $1 == "bip" ]]; then
+    bip
+elif [[ $1 == "bup" ]]; then
+    bup
+elif [[ $1 == "bcp" ]]; then
+    bcp
+else
+    echo "Available for 'f' (handy functions) : "
+    echo "--------------------------------------"
+    echo "  vf                  - fuzzy open with vim from anywhere"
+    echo "  fe [fuzzy pattern]  - Open the selected file with the default editor"
+    echo "  vg                  - fuzzy grep open via ag"
+    echo "  fd                  - cd to selected directory"
+    echo "  fdr                 - cd to selected parent directory"
+    echo "  cf [...search]      - fuzzy cd from anywhere"
+    echo "  fif                 - find-in-file using ripgrep combined with preview"
+    echo "  da                  - select a docker container to start and attach to"
+    echo "  ds                  - select a running docker container to stop"
+    echo "  drm                 - select a docker container to remove"
+    echo "  drms                - select mulltiple docker containers to remove"
+    echo "  drmi                - select a docker image or images to remove"
+    echo "  chh                 - browse chrome browser history"
+    echo "  ns                  - select and run npm script"
+    echo "  bip                 - install (one or multiple) selected applications(s) uses brew search (broken)"
+    echo "  bup                 - update (one or multiple) selected application(s) (broken)"
+    echo "  bcp                 - delete (one or multiple) selected application(s) (broken)"
+fi
+
+
+
