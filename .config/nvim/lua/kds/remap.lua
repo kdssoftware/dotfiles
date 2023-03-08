@@ -1,5 +1,5 @@
 vim.g.mapleader = " " 
-vim.keymap.set("n", "<leader>pv", ":NvimTreeFocus<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- views, always use C-a => same as tmux config
 vim.keymap.set("n","<C-h>","<C-W>h")

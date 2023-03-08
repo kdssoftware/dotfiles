@@ -8,6 +8,7 @@ This is my home directory, keeping all the .files.
   - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [NeoVim](https://github.com/neovim/neovim) : [~/.config/nvim](https://github.com/kdssoftware/dotfiles/tree/master/.config/nvim)
+  - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Amethyst](https://github.com/ianyh/Amethyst)
 
 Other CLI tools:
