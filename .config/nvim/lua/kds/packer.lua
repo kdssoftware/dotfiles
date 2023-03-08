@@ -60,9 +60,6 @@ use {
     require("tailwindcss-colors").setup()
   end
 }
---use {
---"liuchengxu/vim-which-key",
---}
 use({
   "utilyre/barbecue.nvim",
   tag = "*",
@@ -75,9 +72,8 @@ use({
     require("barbecue").setup()
   end,
 })
---use { 'echasnovski/mini.cursorword', branch = 'stable' }
 use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
---use('RRethy/vim-illuminate')
+use 'simrat39/symbols-outline.nvim'
 end)
